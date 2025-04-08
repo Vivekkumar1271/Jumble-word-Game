@@ -1,5 +1,12 @@
 import random
-
+# def turn1(p1name, p2name, pp1, pp2,turn):
+#     print(turn)
+#     if turn % 2 == 0:
+#          c = int(input('Press 1 to continue or 0 to Quit: '))
+#          if c == 0:
+#            thank(p1name, p2name, pp1, pp2)
+#            return True
+#          return False
 def choose():
     words = ['rainbow', 'computer', 'science', 'programming', 'mathematics', 'player', 'condition', 'reverse', 'water', 'boat']
     pick = random.choice(words)
@@ -37,10 +44,10 @@ def play():
                 print("Your score is: ", pp1)
             else:
                 print("Better luck next time. I thought:", picked_word)
-            c = int(input('Press 1 to continue or 0 to Quit: '))
-            if c == 0:
-                thank(p1name, p2name, pp1, pp2)
-                break
+            # if turn%2 == 0:
+           
+            print(turn)
+            # turn1(p1name, p2name, pp1, pp2,turn)
         # player 2
         else:
             print(p2name, "your turn.")
@@ -51,10 +58,17 @@ def play():
                 print("Your score is: ", pp2)
             else:
                 print("Better luck next time. I thought:", picked_word)
+            # c = int(input('Press 1 to continue or 0 to Quit: '))
+            # if c == 0:
+            #     thank(p1name, p2name, pp1, pp2)
+            #     break
+            # turn1(p1name, p2name, pp1, pp2,turn)
+        turn += 1
+        if turn % 2 == 0:
             c = int(input('Press 1 to continue or 0 to Quit: '))
             if c == 0:
                 thank(p1name, p2name, pp1, pp2)
-                break
-        turn += 1
+                break    
+        
 
 play()
